@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){const e=new Splide(".splide__vertical",{direction:"ttb",height:"100vh",arrows:!1,wheel:!0,speed:1e3,classes:{pagination:"splide__pagination splide__pagination--vertical",page:"splide__pagination__page splide__pagination__page--vertical"}});e.mount()});
