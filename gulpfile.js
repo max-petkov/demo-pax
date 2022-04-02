@@ -42,7 +42,15 @@ gulp.task("js", function () {
   return gulp.src(js.src).pipe(uglify()).pipe(gulp.dest(js.dist));
 });
 
-gulp.task("build", gulp.series("html", "css", "js"));
+const svg = {
+  src: "src/assets/svg/*.svg",
+  dist: "dist/assets/svg",
+};
+gulp.task("svg", function () {
+  return gulp.src(svg.src).pipe(gulp.dest(svg.dist));
+});
+
+gulp.task("build", gulp.series("html", "css", "js", "svg"));
 
 gulp.task("watch", function () {
   browsersync.init({ server: { baseDir: "./dist" } });

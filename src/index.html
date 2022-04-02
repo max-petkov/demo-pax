@@ -14,29 +14,75 @@
 </head>
 
 <body>
+    <div class="resources">
+        <h3>Resources
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+            </svg>
+        </h3>
+        <ul class="resources__container">
+            <li class="resources__item">
+                <h3>BG Gradient</h3>
+                <a class="resources__link" href="https://codepen.io/desandro/pen/BzJZQv" target="_blank">CodePen</a>
+            </li>
+            <li class="resources__item">
+                <h3>BG Noise</h3>
+                <a class="resources__link" href="https://grainy-gradients.vercel.app/" target="_blank">Grainy Gradient
+                    Tool</a>
+                <a class="resources__link"
+                    href="https://webdesign.tutsplus.com/tutorials/better-web-images-with-svg-grainy-filters--cms-39739"
+                    target="_blank">BG Noise Example</a>
+                <a class="resources__link"
+                    href="https://css-tricks.com/grainy-gradients/#:~:text=The%20trick%3A%20SVG%20noise%20and%20CSS%20gradients&text=The%20trick%20is%20to%20use,gradient%20that%20gradually%20dithers%20away."
+                    target="_blank">CSS Tricks</a>
+            </li>
+            <li class="resources__item">
+                <h3>Text Gradient</h3>
+                <a class="resources__link" href="https://codepen.io/hendrysadrak/pen/VLMOMJ" target="_blank">CodePen</a>
+                <a class="resources__link" href="https://www.bas4e.com/" target="_blank">Bas4e</a>
+            </li>
+            <li class="resources__item">
+                <h3>CTA</h3>
+                <a class="resources__link" href="https://greensock.com/cheatsheet/" target="_blank">GSAP Cheat Sheet</a>
+            </li>
+            <li class="resources__item">
+                <h3>Video .mov</h3>
+                <a class="resources__link"
+                    href="https://stackoverflow.com/questions/31380695/how-to-open-mov-format-video-in-html-video-tag"
+                    target="_blank">stack overflow</a>
+            </li>
+        </ul>
+    </div>
     <section class="splide__vertical">
         <div class="splide__track splide__track--vertical">
             <div class="splide__list splide__list--vertical">
-                <section class="splide__slide splide__slide--gradient-bg">
-                    <div class="container">
-                        <h2>BG Gradients</h2>
+                <section class="splide__slide splide__slide--vertical">
+                    <h2 class="heading-bg-gradient">BG Gradient</h2>
+                    <div class="canvas__container">
+                        <canvas class="js-bg-gradient" width="2" height="2"></canvas>
                     </div>
                 </section>
-                <section class="splide__slide splide__slide--gradient-text">
+
+                <section class="splide__slide splide__slide--vertical">
                     <div class="container">
                         <h2>Text Gradients</h2>
                     </div>
                 </section>
-                <section class="splide__slide splide__slide--cta">
+
+                <section class="splide__slide splide__slide--vertical">
                     <div class="container">
                         <h2>CTA Animated Button</h2>
                     </div>
                 </section>
-                <section class="splide__slide splide__slide--video">
+
+                <section class="splide__slide splide__slide--vertical">
                     <div class="container">
                         <h2>Video .mov</h2>
                     </div>
                 </section>
+
             </div>
         </div>
     </section>
