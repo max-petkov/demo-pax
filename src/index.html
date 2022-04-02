@@ -60,7 +60,42 @@
             <div class="splide__list splide__list--vertical">
                 <section class="splide__slide splide__slide--vertical">
                     <h2 class="heading-bg-gradient">BG Gradient</h2>
+                    <div class="noise">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                            </svg>
+                            Add Noise
+                        </button>
+                        <div class="noise__controls">
+                            <h3>Noise controls</h3>
+                            <div class="range">
+                                <div>
+                                    <label for="baseFrequency">baseFrequency</label>
+                                    <input type="range" min="0" max="10" value="3" step="0.01" name="baseFrequency"
+                                        class="js-basefrequency" />
+                                </div>
+                                <input type="number" min="0" max="10" value="3" step="0.01" class="js-basefrequency">
+                            </div>
+                            <div class="range">
+                                <div>
+                                    <label for="numOctaves">numOctaves</label>
+                                    <input type="range" min="0" max="6" value="3" step="1" name="numOctaves"
+                                        class="js-numoctaves" />
+                                </div>
+                                <input type="number" min="0" max="6" value="3" step="1" class="js-numoctaves">
+                            </div>
+                        </div>
+                    </div>
                     <div class="canvas__container">
+                        <svg class="d-none">
+                            <filter id='noiseFilter'>
+                                <feTurbulence type='fractalNoise' baseFrequency='3' numOctaves='3'
+                                    stitchTiles='stitch' />
+                            </filter>
+                        </svg>
                         <canvas class="js-bg-gradient" width="2" height="2"></canvas>
                     </div>
                 </section>
