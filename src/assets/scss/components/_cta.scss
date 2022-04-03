@@ -1,0 +1,89 @@
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &__container {
+    display: flex;
+
+    .btn-cta {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 500;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      background-color: #000;
+      color: #fff;
+      transition: 0.3s ease;
+
+      svg {
+        overflow: visible;
+        position: absolute;
+
+        path {
+          transform-origin: center;
+        }
+      }
+
+      //Animation
+      &:first-child {
+        svg {
+          position: absolute;
+          animation: infinite-rotation 30s linear infinite;
+          overflow: visible;
+          path {
+            transform: scale(1);
+          }
+        }
+
+        &:hover {
+          svg {
+            animation: infinite-rotation-fast 5s linear infinite;
+          }
+          path {
+            transform: scale(1.1);
+            transition: 0.3s ease;
+            transform-origin: center;
+          }
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 120px;
+      }
+    }
+  }
+}
+
+@keyframes infinite-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes infinite-rotation-fast {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// @keyframes scale-path {
+//   from {
+//     transform: scale(1) translate(-50%, -50%);
+//   }
+
+//   to {
+//     transform: scale(1.2) translate(-50%, -50%);
+//   }
+// }

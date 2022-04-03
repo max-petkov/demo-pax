@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: #1a1a1a;
+  background-color: #f4f8fa;
+}
+
+h2 {
+  font-size: 48px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 24px;
+}
+
+.heading-bg-gradient {
+  color: #fff;
+  -webkit-text-stroke: 1px #00000089;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+  height: 100%;
+}
